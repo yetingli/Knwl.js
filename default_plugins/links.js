@@ -11,7 +11,7 @@ function Links(knwl) {
 
         for (var i = 0; i < words.length; i++) {
             var word = words[i].replace(/[\(\)!]/g, ""); // replaces every bracket ')' or '(' and every '!' with an empty character
-            if (/^(https?|ftp):\/\/(-\.)?([^\s\/?\.#-]+\.?)+(\/[^\s]*)?$/i.test(word)) {
+            if (/^(https?|ftp):\/\/(-\.)?([^\s\/?\.#-]\.?)+(\/[^\s]*)?$/i.test(word)) {
                 var link = word;
                 if (link[link.length - 1].search(/[?.!,]/g) !== -1) {
                     link = link.substr(0, link.length-1);
